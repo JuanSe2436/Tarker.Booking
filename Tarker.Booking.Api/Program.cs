@@ -1,11 +1,9 @@
-using Microsoft.EntityFrameworkCore;
 using Tarker.Booking.Api;
 using Tarker.Booking.Application;
 using Tarker.Booking.Common;
 using Tarker.Booking.External;
 using Tarker.Booking.Persistence;
-using Tarker.Booking.Application.Interfaces;
-using Tarker.Booking.Persistence.DataBase;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
