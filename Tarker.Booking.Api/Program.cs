@@ -1,5 +1,6 @@
 using Tarker.Booking.Api;
 using Tarker.Booking.Application;
+using Tarker.Booking.Application.DataBase.User.Commands.CreateUser;
 using Tarker.Booking.Common;
 using Tarker.Booking.External;
 using Tarker.Booking.Persistence;
@@ -15,6 +16,11 @@ builder.Services
     .AddPersistence(builder.Configuration);
 
 var app = builder.Build();
+
+app.MapPost("/textService", async (ICreateUserCommand service) =>
+{
+
+});
 
 //app.MapPost("/createTest", async (IDataBaseService _databaseService) =>
 //    {
