@@ -1,6 +1,5 @@
 using Tarker.Booking.Api;
 using Tarker.Booking.Application;
-using Tarker.Booking.Application.DataBase.User.Commands.CreateUser;
 using Tarker.Booking.Common;
 using Tarker.Booking.External;
 using Tarker.Booking.Persistence;
@@ -14,13 +13,11 @@ builder.Services
     .AddApplication()
     .AddExternal(builder.Configuration)
     .AddPersistence(builder.Configuration);
-
+builder.Services.AddControllers();
 var app = builder.Build();
 
-app.MapPost("/textService", async (ICreateUserCommand service) =>
-{
-
-});
+app.MapControllers();
+app.Run();
 
 //app.MapPost("/createTest", async (IDataBaseService _databaseService) =>
 //    {
@@ -41,4 +38,13 @@ app.MapPost("/textService", async (ICreateUserCommand service) =>
 //    return result;
 //});
 
-app.Run();
+
+//var model = new CreateBookingModel
+//{
+//    RegisterDate = DateTime.Now,
+//    Code = Guid.NewGuid().ToString(),
+//    Type = BookingType.Documentation.ToString(),
+//    UserId = 4,
+//    CustomerId = 3
+//};
+
