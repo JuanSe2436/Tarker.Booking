@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tarker.Booking.Application.DataBase.User.GetAllUser
+namespace Tarker.Booking.Application.DataBase.User.Queries.GetAllUser
 {
     public class GetAllUserModel
     {

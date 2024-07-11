@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace Tarker.Booking.Application.DataBase.Bookings.Queries.GetAllaBookings
 {
-    public class GetAllBookingQuery: IGetAllBookingQuery
+    public class GetAllBookingsQuery: IGetAllBookingsQuery
     {
         private readonly IDataBaseService _dataBaseService;
-        public GetAllBookingQuery( IDataBaseService dataBaseService)
+        public GetAllBookingsQuery( IDataBaseService dataBaseService)
         {
             _dataBaseService = dataBaseService;
         }

@@ -1,6 +1,6 @@
 ﻿namespace Tarker.Booking.Application.DataBase.Bookings.Queries.GetAllaBookings
 {
-    public interface IGetAllBookingQuery
+    public interface IGetAllBookingsQuery
     {
         Task<List<GetAllBookingsModel>> Execute();
     }

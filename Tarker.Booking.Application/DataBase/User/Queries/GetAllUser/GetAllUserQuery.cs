@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tarker.Booking.Application.DataBase.User.GetAllUser
+namespace Tarker.Booking.Application.DataBase.User.Queries.GetAllUser
 {
-    public class GetAllUserQuery: IGetAllUserQuery
+    public class GetAllUserQuery : IGetAllUserQuery
     {
         private readonly IDataBaseService _dataBaseService;
         private readonly IMapper _mapper;
@@ -21,7 +21,7 @@ namespace Tarker.Booking.Application.DataBase.User.GetAllUser
         //Metodo que obtiene la lista
         public async Task<List<GetAllUserModel>> Execute()
         {
-            var   listEntity = await _dataBaseService.User.ToListAsync();
+            var listEntity = await _dataBaseService.User.ToListAsync();
             return _mapper.Map<List<GetAllUserModel>>(listEntity);
         }
     }
